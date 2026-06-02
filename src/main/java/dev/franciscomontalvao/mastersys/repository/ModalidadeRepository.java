@@ -1,0 +1,7 @@
+package dev.franciscomontalvao.mastersys.repository;
+
+import dev.franciscomontalvao.mastersys.domain.Modalidade;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ModalidadeRepository extends JpaRepository<Modalidade, Long> {
+}
