@@ -29,6 +29,26 @@ public class Aluno {
 
     private String email;
 
+    private String observacao;
+
+    private String endereco;
+
+    public String getObservacao() {
+        return observacao;
+    }
+
+    public void setObservacao(String observacao) {
+        this.observacao = observacao;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
     private String numero;
 
     private String complemento;
