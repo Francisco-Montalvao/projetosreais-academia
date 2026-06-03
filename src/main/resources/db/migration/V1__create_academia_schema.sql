@@ -7,6 +7,8 @@ create table alunos
     telefone        VARCHAR(30),
     celular         VARCHAR(30),
     email           VARCHAR(100),
+    observacao      VARCHAR(150),
+    endereco        VARCHAR(200),
     numero          VARCHAR(20),
     complemento     VARCHAR(100),
     bairro          VARCHAR(100),
@@ -60,12 +62,12 @@ CREATE TABLE matriculas_modalidades
 (
     id           BIGSERIAL PRIMARY KEY,
     matricula_id BIGINT NOT NULL REFERENCES matriculas (id),
-    modalidae_id BIGINT NOT NULL REFERENCES modalidades (id),
+    modalidade_id BIGINT NOT NULL REFERENCES modalidades (id),
     graduacao_id BIGINT NOT NULL REFERENCES graduacoes (id),
     plano_id     BIGINT NOT NULL REFERENCES planos (id),
     data_inicio  DATE   NOT NULL DEFAULT CURRENT_DATE,
     data_fim     DATE,
-    UNIQUE (matricula_id, modalidae_id)
+    UNIQUE (matricula_id, modalidade_id)
 );
 
 CREATE TABLE faturas_matriculas
