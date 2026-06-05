@@ -1,0 +1,88 @@
+
+@baseUrl = http://localhost:8080
+
+
+### cadastrar aluno
+
+POST {{baseUrl}}/alunos
+content-type: application/json
+
+{
+  "nome": "João Silva",
+  "dataNascimento": "1995-08-15",
+  "sexo": "M",
+  "telefone": "11 98765-4321",
+  "celular": "11 91234-5678",
+  "email": "joao@email.com",
+  "observacao": "Aluno dedicado e participativo",
+  "endereco": "rua das flores",
+  "numero": "123",
+  "complemento": "Apto 45",
+  "bairro": "Jardim das Acácias",
+  "cidade": "São Paulo",
+  "estado": "SP",
+  "cep": "01234567"
+}
+
+
+### listar alunos
+GET {{baseUrl}}//alunos
+
+
+### listar alunos com paginacao
+GET {{baseUrl}}//alunos?page=0&size=10&sort=nome,asc
+
+
+### buscar aluno por id
+GET {{baseUrl}}//alunos/6
+
+
+### atualizar aluno
+PUT {{baseUrl}}//alunos/6
+content-type: application/json
+
+{
+  "nome": "João Silva atualizado",
+  "dataNascimento": "1995-08-15",
+  "sexo": "M",
+  "telefone": "11 98765-4321",
+  "celular": "11 91234-5678",
+  "email": "joao@email.com",
+  "observacao": "Aluno dedicado e participativo",
+  "endereco": "rua das flores",
+  "numero": "123",
+  "complemento": "Apto 45",
+  "bairro": "Jardim das Acácias",
+  "cidade": "São Paulo",
+  "estado": "SP",
+  "cep": "01234567"
+}
+
+
+
+### deletar aluno
+DELETE {{baseUrl}}//alunos/6
+
+
+
+### cadastrar outro aluno
+
+POST {{baseUrl}}/alunos
+content-type: application/json
+
+{
+  "nome": "Maria oliveira",
+  "dataNascimento": "1995-08-15",
+  "sexo": "M",
+  "telefone": "11 98765-4321",
+  "celular": "11 91234-5678",
+  "email": "joao@email.com",
+  "observacao": "Aluno dedicado e participativo",
+  "endereco": "rua das flores",
+  "numero": "123",
+  "complemento": "Apto 45",
+  "bairro": "Jardim das Acácias",
+  "cidade": "São Paulo",
+  "estado": "SP",
+  "cep": "01234567"
+}
